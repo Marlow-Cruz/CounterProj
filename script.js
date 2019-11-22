@@ -79,12 +79,14 @@ function clearTimer(){
     minutes = 0;
     hours = 0;
     resetButtonVal = 0;
+    wrongTyping = 0;
     document.getElementById("test-area").value = "";
     document.getElementById("clock").innerHTML = "00:00:00";
     started = false;
     typedText = "";
     wordCountTotal.innerHTML = " ";    
     wordPerMinTotal.innerHTML = " ";
+    wrongWordCount.innerHTML = " ";
     console.log("clearTimer function");
 }
 
@@ -93,6 +95,7 @@ var started = false;
 let evt = 0;
 var index = 0;
 var classVal = "false";
+var wrongTyping = 0;
 
 // Backspace and remove character
 function remove_character(str, char_pos) {
@@ -104,10 +107,7 @@ function remove_character(str, char_pos) {
 
 // Start the application 
 function startFunction(e){ 
-
-    //update and then validate....
-
-
+    //update and then validate...
     if(typedText.length !== originText.length || typedText !== originText){
         if(e.key != "Shift"){
             if(e.key == "Backspace"){
@@ -134,17 +134,21 @@ function startFunction(e){
                         if(typedText.substring(0, index) === originText.substring(0, index)){
                             console.log("Typed correct : " + typedText.substring(0, index)  + "    Index = " + originText.substring(0, index));
                             wordCount++;
-                            
+                            //toggle the border to OK color, no error typing
                             //index++;  
                             if(classVal == "true"){
                                 testWrapper.classList.toggle("myClassWrapper");
                                 classVal = "false";
                             }
                         }else{
+                            console.log("Typed wrong : " + e.key);
+                            //toggle the boarder to red when error typing
                             if(classVal == "false"){
                                 testWrapper.classList.toggle("myClassWrapper");
                                 classVal = "true";
+                               
                             }
+                            wrongTyping++;
                             //index++;
                         } 
             }
@@ -165,6 +169,7 @@ function completeCount(){
     
     wordCountTotal.innerHTML = wordCount;    
     wordPerMinTotal.innerHTML = wpm;
+    wrongWordCount.innerHTML = wrongTyping;
 
 }
 

@@ -177,7 +177,7 @@ body {
     font-size: 3em;
     font-weight: bold;
 }
-
+ 
 #reset {
     padding: .5em 1em;
     font-size: 1.2em;
@@ -193,16 +193,35 @@ body {
 }
 #wordCalculation{
     color: red;
-    font-size: 1.5em;
+    font-size: 16px;
     border: 5px solid blue;
     width: 3em;
     text-align: center;
 }
 #wordTotal{
     color: red;
-    font-size: 1.5em;
+    font-size: 16px;
     border: 5px solid blue;
     width: 3em;
     text-align: center;
 
+}
+#wrongWordTotal{
+    color: red;
+    font-size: 16px;
+    border: 5px solid blue;
+    width: 3em;
+    text-align: center;
+}
+.extra{
+    position: absolute;
+}
+#wordPerMin{
+    margin: 5px 5px 5px 5px;
+}
+#wordCount{
+    margin: 5px 5px 5px 5px;
+}
+#wrongWordCount{
+    margin: 5px 5px 5px 5px;
 }
