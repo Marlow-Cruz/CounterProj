@@ -141,6 +141,10 @@ body {
     border: 10px solid grey;
     border-radius: 10px;
 }
+.myClassWrapper{
+    border: 10px solid red;
+}
+
 
 #origin-text {
     margin: 1em 0;
@@ -168,7 +172,8 @@ body {
     flex-wrap: wrap;
 }
 
-.timer {
+
+#clock{
     font-size: 3em;
     font-weight: bold;
 }
