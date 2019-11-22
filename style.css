@@ -191,3 +191,18 @@ body {
     color: white;
     background-color: #E95D0F;
 }
+#wordCalculation{
+    color: red;
+    font-size: 1.5em;
+    border: 5px solid blue;
+    width: 3em;
+    text-align: center;
+}
+#wordTotal{
+    color: red;
+    font-size: 1.5em;
+    border: 5px solid blue;
+    width: 3em;
+    text-align: center;
+
+}
