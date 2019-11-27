@@ -196,6 +196,7 @@ body {
     font-size: 16px;
     border: 5px solid blue;
     width: 3em;
+    height: 2em;
     text-align: center;
 }
 #wordTotal{
@@ -203,6 +204,7 @@ body {
     font-size: 16px;
     border: 5px solid blue;
     width: 3em;
+    height: 2em;
     text-align: center;
 
 }
@@ -211,6 +213,7 @@ body {
     font-size: 16px;
     border: 5px solid blue;
     width: 3em;
+    height: 2em;
     text-align: center;
 }
 .extra{
